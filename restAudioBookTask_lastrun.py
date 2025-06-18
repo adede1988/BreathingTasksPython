@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 18, 2025, at 16:04
+    on June 18, 2025, at 16:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -657,7 +657,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             flashTim = flashTim + 2 + random()
             alreadySaved = False
             
-        if alreadySaved == False and whitePhotoDiode_1.status == NOT_STARTED and tThisFlip >= 2 - frameTolerance:
+        if alreadySaved == False and whitePhotoDiode_1.status == NOT_STARTED and tThisFlip >= flashTim - frameTolerance:
             thisExp.timestampOnFlip(win, 'diode' + str(flashCount))
             flashCount = flashCount + 1
             alreadySaved = True
