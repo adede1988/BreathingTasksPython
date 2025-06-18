@@ -1,0 +1,90 @@
+12.3375 	WARNING 	User requested fullscreen with size [2048 1152], but screen is actually [2880, 1920]. Using actual size
+13.1437 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002849F93A740>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002849F93A7A0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002849FA0AE30>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2880, 1920]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+13.1438 	EXP 	window1: backgroundImage = ''
+13.1439 	EXP 	window1: backgroundFit = 'none'
+13.3277 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+13.3277 	EXP 	window1: recordFrameIntervals = False
+13.4599 	EXP 	window1: recordFrameIntervals = True
+13.6438 	EXP 	Screen (0) actual frame rate measured at 59.94Hz
+13.6439 	EXP 	window1: recordFrameIntervals = False
+16.8990 	EXP 	slowBreathing: status = STARTED
+17.0123 	EXP 	Created instructionText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructionText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.0132 	EXP 	Created blackPhotoDiodeBox = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='blackPhotoDiodeBox', opacity=1, ori=0.0, pos=array([-0.7 ,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+17.0144 	EXP 	Created whitePhotoDiode_1 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-7.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.0, name='whitePhotoDiode_1', opacity=1, ori=0.0, pos=array([-0.7 ,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+17.0156 	EXP 	Created polygon = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1. , 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+17.0231 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thank you for participating :)', units='height', win=Window(...), wrapWidth=1)
+0.0073 	EXP 	instructionText: autoDraw = True
+5.4704 	DATA 	Keypress: space
+5.4729 	EXP 	instructionText: autoDraw = False
+5.4729 	EXP 	whitePhotoDiode_1: fillColor = <psychopy.colors.Color: white, alpha=1.0>
+5.4729 	EXP 	blackPhotoDiodeBox: autoDraw = True
+5.4729 	EXP 	whitePhotoDiode_1: autoDraw = True
+5.4729 	EXP 	polygon: autoDraw = True
+5.6863 	EXP 	whitePhotoDiode_1: autoDraw = False
+6.4862 	EXP 	whitePhotoDiode_1: autoDraw = True
+6.6865 	EXP 	whitePhotoDiode_1: autoDraw = False
+16.5197 	EXP 	whitePhotoDiode_1: autoDraw = True
+16.7198 	EXP 	whitePhotoDiode_1: autoDraw = False
+26.5365 	EXP 	whitePhotoDiode_1: autoDraw = True
+26.7363 	EXP 	whitePhotoDiode_1: autoDraw = False
+36.5867 	EXP 	whitePhotoDiode_1: autoDraw = True
+36.7862 	EXP 	whitePhotoDiode_1: autoDraw = False
+46.6196 	EXP 	whitePhotoDiode_1: autoDraw = True
+46.8199 	EXP 	whitePhotoDiode_1: autoDraw = False
+56.6364 	EXP 	whitePhotoDiode_1: autoDraw = True
+56.8364 	EXP 	whitePhotoDiode_1: autoDraw = False
+66.6863 	EXP 	whitePhotoDiode_1: autoDraw = True
+66.8864 	EXP 	whitePhotoDiode_1: autoDraw = False
+76.7031 	EXP 	whitePhotoDiode_1: autoDraw = True
+76.9032 	EXP 	whitePhotoDiode_1: autoDraw = False
+86.7363 	EXP 	whitePhotoDiode_1: autoDraw = True
+86.9362 	EXP 	whitePhotoDiode_1: autoDraw = False
+96.7531 	EXP 	whitePhotoDiode_1: autoDraw = True
+96.9529 	EXP 	whitePhotoDiode_1: autoDraw = False
+106.7861 	EXP 	whitePhotoDiode_1: autoDraw = True
+106.9863 	EXP 	whitePhotoDiode_1: autoDraw = False
+116.8200 	EXP 	whitePhotoDiode_1: autoDraw = True
+117.0198 	EXP 	whitePhotoDiode_1: autoDraw = False
+126.8699 	EXP 	whitePhotoDiode_1: autoDraw = True
+127.0698 	EXP 	whitePhotoDiode_1: autoDraw = False
+136.9197 	EXP 	whitePhotoDiode_1: autoDraw = True
+137.1197 	EXP 	whitePhotoDiode_1: autoDraw = False
+146.9363 	EXP 	whitePhotoDiode_1: autoDraw = True
+147.1362 	EXP 	whitePhotoDiode_1: autoDraw = False
+156.9696 	EXP 	whitePhotoDiode_1: autoDraw = True
+157.1696 	EXP 	whitePhotoDiode_1: autoDraw = False
+166.9866 	EXP 	whitePhotoDiode_1: autoDraw = True
+167.1862 	EXP 	whitePhotoDiode_1: autoDraw = False
+177.0197 	EXP 	whitePhotoDiode_1: autoDraw = True
+177.2195 	EXP 	whitePhotoDiode_1: autoDraw = False
+187.0529 	EXP 	whitePhotoDiode_1: autoDraw = True
+187.2528 	EXP 	whitePhotoDiode_1: autoDraw = False
+197.0864 	EXP 	whitePhotoDiode_1: autoDraw = True
+197.2863 	EXP 	whitePhotoDiode_1: autoDraw = False
+207.1196 	EXP 	whitePhotoDiode_1: autoDraw = True
+207.3194 	EXP 	whitePhotoDiode_1: autoDraw = False
+217.1528 	EXP 	whitePhotoDiode_1: autoDraw = True
+217.3529 	EXP 	whitePhotoDiode_1: autoDraw = False
+227.1697 	EXP 	whitePhotoDiode_1: autoDraw = True
+227.3696 	EXP 	whitePhotoDiode_1: autoDraw = False
+237.1860 	EXP 	whitePhotoDiode_1: autoDraw = True
+237.3864 	EXP 	whitePhotoDiode_1: autoDraw = False
+247.2362 	EXP 	whitePhotoDiode_1: autoDraw = True
+247.4363 	EXP 	whitePhotoDiode_1: autoDraw = False
+257.2699 	EXP 	whitePhotoDiode_1: autoDraw = True
+257.4696 	EXP 	whitePhotoDiode_1: autoDraw = False
+267.3029 	EXP 	whitePhotoDiode_1: autoDraw = True
+267.5031 	EXP 	whitePhotoDiode_1: autoDraw = False
+277.3361 	EXP 	whitePhotoDiode_1: autoDraw = True
+277.5359 	EXP 	whitePhotoDiode_1: autoDraw = False
+287.3529 	EXP 	whitePhotoDiode_1: autoDraw = True
+287.5529 	EXP 	whitePhotoDiode_1: autoDraw = False
+297.3698 	EXP 	whitePhotoDiode_1: autoDraw = True
+297.5696 	EXP 	whitePhotoDiode_1: autoDraw = False
+305.4859 	EXP 	blackPhotoDiodeBox: autoDraw = False
+305.4859 	EXP 	whitePhotoDiode_1: autoDraw = False
+305.4859 	EXP 	polygon: autoDraw = False
+305.4859 	EXP 	text: autoDraw = True
+310.4862 	EXP 	text: autoDraw = False
+310.4862 	EXP 	text: autoDraw = False
+310.4865 	EXP 	slowBreathing: status = STOPPED
