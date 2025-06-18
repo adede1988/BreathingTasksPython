@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on June 18, 2025, at 10:15
+    on June 18, 2025, at 14:49
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -325,12 +325,15 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     key_resp = keyboard.Keyboard()
     
     # --- Initialize components for Routine "audiobook" ---
-    # Set experiment start values for variable component col1
-    col1 = [-1,-1,-1]
-    col1Container = []
-    # Set experiment start values for variable component col2
-    col2 = [-1, -1, -1]
-    col2Container = []
+    # Set experiment start values for variable component alreadySaved
+    alreadySaved = False
+    alreadySavedContainer = []
+    # Set experiment start values for variable component flashCount
+    flashCount = 1
+    flashCountContainer = []
+    # Set experiment start values for variable component flashTim
+    flashTim = 2
+    flashTimContainer = []
     audioRecording = sound.Sound('the-wonderful-wizard-of-oz-002-chapter-1-the-cyclone.2747.wav', secs=-1, stereo=True, hamming=True,
         name='audioRecording')
     audioRecording.setVolume(1.0)
@@ -339,25 +342,22 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
         ori=0.0, pos=(-.7, .45), anchor='center',
         lineWidth=1.0,     colorSpace='rgb',  lineColor=[-1, -1, -1], fillColor=[-1, -1, -1],
-        opacity=None, depth=-4.0, interpolate=True)
+        opacity=None, depth=-5.0, interpolate=True)
     whitePhotoDiode_1 = visual.Rect(
         win=win, name='whitePhotoDiode_1',
         width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
         ori=0.0, pos=(-.7, .45), anchor='center',
         lineWidth=1.0,     colorSpace='rgb',  lineColor=None, fillColor='white',
-        opacity=None, depth=-5.0, interpolate=True)
-    whitePhotoDiode_2 = visual.Rect(
-        win=win, name='whitePhotoDiode_2',
-        width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
-        ori=0.0, pos=(-.7, .45), anchor='center',
-        lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='white',
         opacity=None, depth=-6.0, interpolate=True)
-    whitePhotoDiode_3 = visual.Rect(
-        win=win, name='whitePhotoDiode_3',
-        width=(.1, 0.1)[0], height=(.1, 0.1)[1],
-        ori=0.0, pos=(-.7, .45), anchor='center',
-        lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='white',
-        opacity=None, depth=-7.0, interpolate=True)
+    
+    # --- Initialize components for Routine "thankYou" ---
+    text = visual.TextStim(win=win, name='text',
+        text='Thank you for participating :)',
+        font='Open Sans',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
     
     # create some handy timers
     if globalClock is None:
@@ -502,21 +502,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "audiobook" ---
     continueRoutine = True
     # update component parameters for each repeat
-    # Run 'Begin Routine' code from colHandler
-    col1 = [1, 1, 1]
-    col2 = [1, 1, 1]
-    
     thisExp.addData('audiobook.started', globalClock.getTime())
-    audioRecording.setSound('the-wonderful-wizard-of-oz-002-chapter-1-the-cyclone.2747.wav', secs=100000, hamming=True)
+    flashTim = 2  # Set Routine start values for flashTim
+    audioRecording.setSound('the-wonderful-wizard-of-oz-002-chapter-1-the-cyclone.2747.wav', hamming=True)
     audioRecording.setVolume(1.0, log=False)
     audioRecording.seek(0)
     whitePhotoDiode_1.setFillColor([1,1,1])
-    whitePhotoDiode_2.setFillColor(col1)
-    whitePhotoDiode_2.setLineColor(col1)
-    whitePhotoDiode_3.setFillColor(col2)
-    whitePhotoDiode_3.setLineColor(col2)
     # keep track of which components have finished
-    audiobookComponents = [audioRecording, blackPhotoDiodeBox, whitePhotoDiode_1, whitePhotoDiode_2, whitePhotoDiode_3]
+    audiobookComponents = [audioRecording, blackPhotoDiodeBox, whitePhotoDiode_1]
     for thisComponent in audiobookComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -538,6 +531,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        # Run 'Each Frame' code from diodeTimer
+        if whitePhotoDiode_1.status == FINISHED: 
+            whitePhotoDiode_1.status = NOT_STARTED
+            flashTim = flashTim + 2 + random()
+            alreadySaved = False
+            
+        if alreadySaved == False and whitePhotoDiode_1.status == NOT_STARTED and tThisFlip >= 2 - frameTolerance:
+            thisExp.timestampOnFlip(win, 'diode' + str(flashCount))
+            flashCount = flashCount + 1
+            alreadySaved = True
         
         # if audioRecording is starting this frame...
         if audioRecording.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -550,19 +553,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update status
             audioRecording.status = STARTED
             audioRecording.play(when=win)  # sync with win flip
-        
-        # if audioRecording is stopping this frame...
-        if audioRecording.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > audioRecording.tStartRefresh + 100000-frameTolerance:
-                # keep track of stop time/frame for later
-                audioRecording.tStop = t  # not accounting for scr refresh
-                audioRecording.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'audioRecording.stopped')
-                # update status
-                audioRecording.status = FINISHED
-                audioRecording.stop()
         # update audioRecording status according to whether it's playing
         if audioRecording.isPlaying:
             audioRecording.status = STARTED
@@ -589,23 +579,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update params
             pass
         
-        # if blackPhotoDiodeBox is stopping this frame...
-        if blackPhotoDiodeBox.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > blackPhotoDiodeBox.tStartRefresh + 10000-frameTolerance:
-                # keep track of stop time/frame for later
-                blackPhotoDiodeBox.tStop = t  # not accounting for scr refresh
-                blackPhotoDiodeBox.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'blackPhotoDiodeBox.stopped')
-                # update status
-                blackPhotoDiodeBox.status = FINISHED
-                blackPhotoDiodeBox.setAutoDraw(False)
-        
         # *whitePhotoDiode_1* updates
         
         # if whitePhotoDiode_1 is starting this frame...
-        if whitePhotoDiode_1.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        if whitePhotoDiode_1.status == NOT_STARTED and tThisFlip >= flashTim-frameTolerance:
             # keep track of start time/frame for later
             whitePhotoDiode_1.frameNStart = frameN  # exact frame index
             whitePhotoDiode_1.tStart = t  # local t and not account for scr refresh
@@ -635,72 +612,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 whitePhotoDiode_1.status = FINISHED
                 whitePhotoDiode_1.setAutoDraw(False)
         
-        # *whitePhotoDiode_2* updates
-        
-        # if whitePhotoDiode_2 is starting this frame...
-        if whitePhotoDiode_2.status == NOT_STARTED and tThisFlip >= 2.4-frameTolerance:
-            # keep track of start time/frame for later
-            whitePhotoDiode_2.frameNStart = frameN  # exact frame index
-            whitePhotoDiode_2.tStart = t  # local t and not account for scr refresh
-            whitePhotoDiode_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(whitePhotoDiode_2, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'whitePhotoDiode_2.started')
-            # update status
-            whitePhotoDiode_2.status = STARTED
-            whitePhotoDiode_2.setAutoDraw(True)
-        
-        # if whitePhotoDiode_2 is active this frame...
-        if whitePhotoDiode_2.status == STARTED:
-            # update params
-            pass
-        
-        # if whitePhotoDiode_2 is stopping this frame...
-        if whitePhotoDiode_2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > whitePhotoDiode_2.tStartRefresh + .2-frameTolerance:
-                # keep track of stop time/frame for later
-                whitePhotoDiode_2.tStop = t  # not accounting for scr refresh
-                whitePhotoDiode_2.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'whitePhotoDiode_2.stopped')
-                # update status
-                whitePhotoDiode_2.status = FINISHED
-                whitePhotoDiode_2.setAutoDraw(False)
-        
-        # *whitePhotoDiode_3* updates
-        
-        # if whitePhotoDiode_3 is starting this frame...
-        if whitePhotoDiode_3.status == NOT_STARTED and tThisFlip >= 2.8-frameTolerance:
-            # keep track of start time/frame for later
-            whitePhotoDiode_3.frameNStart = frameN  # exact frame index
-            whitePhotoDiode_3.tStart = t  # local t and not account for scr refresh
-            whitePhotoDiode_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(whitePhotoDiode_3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'whitePhotoDiode_3.started')
-            # update status
-            whitePhotoDiode_3.status = STARTED
-            whitePhotoDiode_3.setAutoDraw(True)
-        
-        # if whitePhotoDiode_3 is active this frame...
-        if whitePhotoDiode_3.status == STARTED:
-            # update params
-            pass
-        
-        # if whitePhotoDiode_3 is stopping this frame...
-        if whitePhotoDiode_3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > whitePhotoDiode_3.tStartRefresh + .2-frameTolerance:
-                # keep track of stop time/frame for later
-                whitePhotoDiode_3.tStop = t  # not accounting for scr refresh
-                whitePhotoDiode_3.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'whitePhotoDiode_3.stopped')
-                # update status
-                whitePhotoDiode_3.status = FINISHED
-                whitePhotoDiode_3.setAutoDraw(False)
-        
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
             thisExp.status = FINISHED
@@ -726,12 +637,107 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in audiobookComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    
-    
     thisExp.addData('audiobook.stopped', globalClock.getTime())
+    
+    
+    thisExp.addData('flashTim.routineEndVal', flashTim)  # Save end Routine value
     audioRecording.pause()  # ensure sound has stopped at end of Routine
     # the Routine "audiobook" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
+    
+    # --- Prepare to start Routine "thankYou" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('thankYou.started', globalClock.getTime())
+    # keep track of which components have finished
+    thankYouComponents = [text]
+    for thisComponent in thankYouComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "thankYou" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 5.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text* updates
+        
+        # if text is starting this frame...
+        if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text.frameNStart = frameN  # exact frame index
+            text.tStart = t  # local t and not account for scr refresh
+            text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text.started')
+            # update status
+            text.status = STARTED
+            text.setAutoDraw(True)
+        
+        # if text is active this frame...
+        if text.status == STARTED:
+            # update params
+            pass
+        
+        # if text is stopping this frame...
+        if text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text.tStartRefresh + 5-frameTolerance:
+                # keep track of stop time/frame for later
+                text.tStop = t  # not accounting for scr refresh
+                text.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text.stopped')
+                # update status
+                text.status = FINISHED
+                text.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, inputs=inputs, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in thankYouComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "thankYou" ---
+    for thisComponent in thankYouComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('thankYou.stopped', globalClock.getTime())
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-5.000000)
+    
     
     
     
