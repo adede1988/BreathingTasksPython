@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on June 18, 2025, at 14:14
+    on June 18, 2025, at 15:26
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -369,6 +369,13 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Set experiment start values for variable component typedText
     typedText = ''
     typedTextContainer = []
+    text = visual.TextStim(win=win, name='text',
+        text='How many breaths did you take? ',
+        font='Open Sans',
+        pos=(0, .1), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
     key_countRsp = keyboard.Keyboard()
     typedDisplay = visual.TextStim(win=win, name='typedDisplay',
         text='',
@@ -376,7 +383,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         pos=(0, -.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-3.0);
+        depth=-4.0);
     
     # --- Initialize components for Routine "ThankYou" ---
     text_2 = visual.TextStim(win=win, name='text_2',
@@ -528,7 +535,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=5.0, method='random', 
+    trials = data.TrialHandler(nReps=6.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -847,7 +854,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         key_countRsp.rt = []
         _key_countRsp_allKeys = []
         # keep track of which components have finished
-        countInputComponents = [key_countRsp, typedDisplay]
+        countInputComponents = [text, key_countRsp, typedDisplay]
         for thisComponent in countInputComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -883,6 +890,39 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     elif key in ['0','1','2','3','4','5','6','7','8','9']:
                         if len(typedText) < 2:  # limit to 2 digits
                             typedText += str(key.name)  
+            
+            # *text* updates
+            
+            # if text is starting this frame...
+            if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                text.frameNStart = frameN  # exact frame index
+                text.tStart = t  # local t and not account for scr refresh
+                text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text.started')
+                # update status
+                text.status = STARTED
+                text.setAutoDraw(True)
+            
+            # if text is active this frame...
+            if text.status == STARTED:
+                # update params
+                pass
+            
+            # if text is stopping this frame...
+            if text.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > text.tStartRefresh + 10000-frameTolerance:
+                    # keep track of stop time/frame for later
+                    text.tStop = t  # not accounting for scr refresh
+                    text.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text.stopped')
+                    # update status
+                    text.status = FINISHED
+                    text.setAutoDraw(False)
             
             # *key_countRsp* updates
             waitOnFlip = False
@@ -973,7 +1013,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 5.0 repeats of 'trials'
+    # completed 6.0 repeats of 'trials'
     
     
     # --- Prepare to start Routine "ThankYou" ---

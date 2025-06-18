@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on June 18, 2025, at 14:41
+    on June 18, 2025, at 15:25
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -541,6 +541,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             thisExp.timestampOnFlip(win, 'diode' + str(flashCount))
             flashCount = flashCount + 1
             alreadySaved = True
+            
+            
+        if audioRecording.status == FINISHED:
+            continueRoutine = False
         
         # if audioRecording is starting this frame...
         if audioRecording.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -578,19 +582,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if blackPhotoDiodeBox.status == STARTED:
             # update params
             pass
-        
-        # if blackPhotoDiodeBox is stopping this frame...
-        if blackPhotoDiodeBox.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > blackPhotoDiodeBox.tStartRefresh + 10000-frameTolerance:
-                # keep track of stop time/frame for later
-                blackPhotoDiodeBox.tStop = t  # not accounting for scr refresh
-                blackPhotoDiodeBox.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'blackPhotoDiodeBox.stopped')
-                # update status
-                blackPhotoDiodeBox.status = FINISHED
-                blackPhotoDiodeBox.setAutoDraw(False)
         
         # *whitePhotoDiode_1* updates
         
