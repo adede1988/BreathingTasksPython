@@ -1,0 +1,36 @@
+6.2263 	WARNING 	User requested fullscreen with size [2048 1152], but screen is actually [2880, 1920]. Using actual size
+7.1017 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001C64B32E3E0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001C64B32E440>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001C64B3DAF20>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2880, 1920]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.1018 	EXP 	window1: backgroundImage = ''
+7.1018 	EXP 	window1: backgroundFit = 'none'
+7.2815 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.2815 	EXP 	window1: recordFrameIntervals = False
+7.4116 	EXP 	window1: recordFrameIntervals = True
+7.5954 	EXP 	Screen (0) actual frame rate measured at 60.02Hz
+7.5954 	EXP 	window1: recordFrameIntervals = False
+10.7464 	EXP 	slowBreathing: status = STARTED
+10.8602 	EXP 	Created instructionText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructionText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.8611 	EXP 	Created blackPhotoDiodeBox = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='blackPhotoDiodeBox', opacity=1, ori=0.0, pos=array([-0.7 ,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+10.8622 	EXP 	Created whitePhotoDiode_1 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-7.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.0, name='whitePhotoDiode_1', opacity=1, ori=0.0, pos=array([-0.7 ,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+10.8632 	EXP 	Created polygon = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1. , 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+10.8720 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thank you for participating :)', units='height', win=Window(...), wrapWidth=1)
+0.0072 	EXP 	instructionText: autoDraw = True
+1.2851 	DATA 	Keypress: space
+1.2887 	EXP 	instructionText: autoDraw = False
+1.2887 	EXP 	whitePhotoDiode_1: fillColor = <psychopy.colors.Color: white, alpha=1.0>
+1.2887 	EXP 	blackPhotoDiodeBox: autoDraw = True
+1.2887 	EXP 	whitePhotoDiode_1: autoDraw = True
+1.2887 	EXP 	polygon: autoDraw = True
+1.4893 	EXP 	whitePhotoDiode_1: autoDraw = False
+2.3058 	EXP 	whitePhotoDiode_1: autoDraw = True
+2.5058 	EXP 	whitePhotoDiode_1: autoDraw = False
+12.3392 	EXP 	whitePhotoDiode_1: autoDraw = True
+12.5392 	EXP 	whitePhotoDiode_1: autoDraw = False
+22.3723 	EXP 	whitePhotoDiode_1: autoDraw = True
+22.5724 	EXP 	whitePhotoDiode_1: autoDraw = False
+32.3892 	EXP 	whitePhotoDiode_1: autoDraw = True
+32.5892 	EXP 	whitePhotoDiode_1: autoDraw = False
+41.1423 	DATA 	Keypress: escape
+41.2914 	EXP 	slowBreathing: status = STOPPED
+41.3061 	EXP 	blackPhotoDiodeBox: autoDraw = False
+41.3061 	EXP 	polygon: autoDraw = False
+41.3063 	EXP 	slowBreathing: status = STOPPED
