@@ -1,0 +1,82 @@
+18.3183 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [2880, 1920]. Using actual size
+19.1948 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002226AC99960>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002226AC999C0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002226AD71900>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2880, 1920]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+19.1948 	EXP 	window1: backgroundImage = ''
+19.1948 	EXP 	window1: backgroundFit = 'none'
+19.3553 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+19.3554 	EXP 	window1: recordFrameIntervals = False
+19.4884 	EXP 	window1: recordFrameIntervals = True
+19.6722 	EXP 	Screen (0) actual frame rate measured at 59.96Hz
+19.6723 	EXP 	window1: recordFrameIntervals = False
+22.6581 	EXP 	restAudioBookTask: status = STARTED
+22.7612 	EXP 	Created instructionText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructionText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+23.0930 	EXP 	Sound audioRecording set volume 1.000
+23.0941 	EXP 	Created blackPhotoDiodeBox = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-5.0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='blackPhotoDiodeBox', opacity=1, ori=0.0, pos=array([-0.7 ,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+23.0953 	EXP 	Created whitePhotoDiode_1 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.0, name='whitePhotoDiode_1', opacity=1, ori=0.0, pos=array([-0.7 ,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+23.1012 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thank you for participating :)', units='height', win=Window(...), wrapWidth=1)
+0.0078 	EXP 	instructionText: autoDraw = True
+17.4778 	DATA 	Mouse: Left button down, pos=(782,427)
+17.4784 	DATA 	Mouse:  Left button up, pos=(782,427)
+59.3268 	EXP 	Sound audioRecording reached end of file
+59.3364 	EXP 	Sound audioRecording started
+59.3286 	DATA 	Keypress: space
+59.3308 	EXP 	instructionText: autoDraw = False
+59.3308 	EXP 	whitePhotoDiode_1: fillColor = <psychopy.colors.Color: white, alpha=1.0>
+59.3308 	EXP 	blackPhotoDiodeBox: autoDraw = True
+61.1534 	EXP 	whitePhotoDiode_1: autoDraw = True
+61.3530 	EXP 	whitePhotoDiode_1: autoDraw = False
+63.1866 	EXP 	whitePhotoDiode_1: autoDraw = True
+63.3862 	EXP 	whitePhotoDiode_1: autoDraw = False
+65.3196 	EXP 	whitePhotoDiode_1: autoDraw = True
+65.5194 	EXP 	whitePhotoDiode_1: autoDraw = False
+67.5032 	EXP 	whitePhotoDiode_1: autoDraw = True
+67.7031 	EXP 	whitePhotoDiode_1: autoDraw = False
+70.2033 	EXP 	whitePhotoDiode_1: autoDraw = True
+70.4032 	EXP 	whitePhotoDiode_1: autoDraw = False
+72.8695 	EXP 	whitePhotoDiode_1: autoDraw = True
+73.0694 	EXP 	whitePhotoDiode_1: autoDraw = False
+75.5864 	EXP 	whitePhotoDiode_1: autoDraw = True
+75.7868 	EXP 	whitePhotoDiode_1: autoDraw = False
+78.1194 	EXP 	whitePhotoDiode_1: autoDraw = True
+78.3193 	EXP 	whitePhotoDiode_1: autoDraw = False
+81.1030 	EXP 	whitePhotoDiode_1: autoDraw = True
+81.3031 	EXP 	whitePhotoDiode_1: autoDraw = False
+84.0201 	EXP 	whitePhotoDiode_1: autoDraw = True
+84.2198 	EXP 	whitePhotoDiode_1: autoDraw = False
+86.2696 	EXP 	whitePhotoDiode_1: autoDraw = True
+86.4697 	EXP 	whitePhotoDiode_1: autoDraw = False
+89.1032 	EXP 	whitePhotoDiode_1: autoDraw = True
+89.3031 	EXP 	whitePhotoDiode_1: autoDraw = False
+90.5266 	DATA 	Mouse: Left button down, pos=(2879,4)
+90.6220 	DATA 	Mouse:  Left button up, pos=(2807,106)
+91.6030 	EXP 	whitePhotoDiode_1: autoDraw = True
+91.8030 	EXP 	whitePhotoDiode_1: autoDraw = False
+94.1195 	EXP 	whitePhotoDiode_1: autoDraw = True
+94.3196 	EXP 	whitePhotoDiode_1: autoDraw = False
+96.5365 	EXP 	whitePhotoDiode_1: autoDraw = True
+96.7363 	EXP 	whitePhotoDiode_1: autoDraw = False
+98.9695 	EXP 	whitePhotoDiode_1: autoDraw = True
+99.1696 	EXP 	whitePhotoDiode_1: autoDraw = False
+101.4699 	EXP 	whitePhotoDiode_1: autoDraw = True
+101.6697 	EXP 	whitePhotoDiode_1: autoDraw = False
+104.0362 	EXP 	whitePhotoDiode_1: autoDraw = True
+104.2363 	EXP 	whitePhotoDiode_1: autoDraw = False
+106.8530 	EXP 	whitePhotoDiode_1: autoDraw = True
+107.0527 	EXP 	whitePhotoDiode_1: autoDraw = False
+109.4863 	EXP 	whitePhotoDiode_1: autoDraw = True
+109.6863 	EXP 	whitePhotoDiode_1: autoDraw = False
+112.3030 	EXP 	whitePhotoDiode_1: autoDraw = True
+112.5032 	EXP 	whitePhotoDiode_1: autoDraw = False
+114.9365 	EXP 	whitePhotoDiode_1: autoDraw = True
+115.1365 	EXP 	whitePhotoDiode_1: autoDraw = False
+117.6862 	EXP 	whitePhotoDiode_1: autoDraw = True
+117.8864 	EXP 	whitePhotoDiode_1: autoDraw = False
+119.9694 	EXP 	whitePhotoDiode_1: autoDraw = True
+120.1696 	EXP 	whitePhotoDiode_1: autoDraw = False
+122.0697 	EXP 	whitePhotoDiode_1: autoDraw = True
+122.2695 	EXP 	whitePhotoDiode_1: autoDraw = False
+124.3195 	EXP 	whitePhotoDiode_1: autoDraw = True
+124.5196 	EXP 	whitePhotoDiode_1: autoDraw = False
+126.2717 	DATA 	Keypress: escape
+126.4042 	EXP 	restAudioBookTask: status = STOPPED
+126.4193 	EXP 	blackPhotoDiodeBox: autoDraw = False
+126.4195 	EXP 	restAudioBookTask: status = STOPPED
